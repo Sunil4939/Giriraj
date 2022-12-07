@@ -1,0 +1,47 @@
+
+
+export const COLORS = {
+    primary: "#92A3FD", //orange
+    primary1: "#9DCEFF",
+    dark: '#2D2D39',
+    transparentPrimray: 'rgba(227, 120, 75, 0.2)',
+    secondary: "#C58BF2",
+    thirdary: "rgba(157, 206, 255, 0.6)",
+    purpule: "#ae1187",
+    orange: "#E64504",
+    orange1: "#FF931E",
+    lightRed: "#FF6666",
+    lightRed2: "#FDDED4",
+    lightRed3: '#FFFAFA',
+    lightRed4: '#F28B8B',
+    green: "#57A608",
+    red: "#ef4444",
+    blue: '#2197D4',
+    lightBlue: '#5CA2F2',
+    darkBlue: "#475A96",
+    darkGray: "#525C67",
+    darkGray2: "#757D85",
+    darkGray3: "#555555",
+    gray: "#898B9A",
+    gray2: "#BBBDC1",
+    gray3: '#CFD0D7',
+    lightGray1: "#DDDDDD",
+    lightGray2: "#F5F5F8",
+    while3: "#FCFCFC",
+    white3: "#FBFBFB",
+    white2:"#F6F6F6",
+    white: '#FFFFFF',
+    lightWhite: '#F0F2F6',
+    black: "#000000",
+    black2: "#232323",
+    blackLight: "#4F4F4F",
+    black3: "#333333",
+    transparent: 'transparent',
+    transparentBlack1: "rgba(0, 0, 0, 0.1)",
+    transparentBlack7: "rgba(0, 0, 0, 0.7)",
+    yellow:"#FCD635",
+    yellow2:"#F9EAAC",
+};
+
+
+export default COLORS;
