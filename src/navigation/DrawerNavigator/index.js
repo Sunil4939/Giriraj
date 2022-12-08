@@ -10,53 +10,8 @@ import ContactUs from '../../screens/Contact';
 import AboutUs from '../../screens/About';
 import Help from '../../screens/Help';
 import SingleProduct from "../../screens/SingleProduct";
+import MyAccount from "../../screens/MyAccount";
 const { width, height } = Dimensions.get('window')
-
-const DrawerData = [
-  {
-      id:1,
-      name: 'Home',
-      icon: icons.home,
-      component: TabNavigator,
-  },
-  {
-      id:2,
-      name: 'Profile',
-      icon: icons.Profile,
-      component: TabNavigator,
-  },
-  {
-      id:3,
-      name: 'Product',
-      icon: icons.Category,
-      component: SingleProduct,
-  },
-  {
-      id:4,
-      name: 'Services',
-      icon: icons.Category,
-      component: TabNavigator,
-  },
-
-  {
-      id:5,
-      name: 'About Us',
-      icon: icons.Info,
-      component: AboutUs,
-  },
-  {
-      id:6,
-      name: 'Help FAQ',
-      icon: icons.Info,
-      component: Help,
-  },
-  {
-      id:7,
-      name: 'Contact Us',
-      icon: icons.Info,
-      component: ContactUs,
-  },
-];
 
 
 const Drawer = createDrawerNavigator();
@@ -93,22 +48,84 @@ const DrawerNavigator = () => {
         drawerStyle: styles.drawerContainer,
       }}
     >
-      {DrawerData.map((item) =>
-        <Drawer.Screen name={item.name} component={item.component}
-          options={() => ({
-            headerShown: false,
-            drawerStyle: styles.tabs,
-            drawerIcon: () => (
-              <View style={{ width: width * .06, }}>
-                <Image style={[styles.icons, item.name == 'Profile' && { width: width * .05, height: height * .035 },
-                item.name == 'Home' && { width: width * .055, height: height * .035 }]} source={item.icon} />
-              </View>
-            ),
-            // swipeEnabled: HideDrawer(route, route.name) 
-          })}
-        />
-      )}
-
+      
+        <Drawer.Screen name='Home' component={TabNavigator}
+        options={() => ({
+          headerShown: false,
+          drawerStyle: styles.tabs,
+          drawerIcon: () => (
+            <View style={styles.iconsContainer}>
+              <Image style={[styles.icons, { width: width * .055, height: height * .035 }]} source={icons.home} />
+            </View>
+          ),
+        })}
+      />  
+        <Drawer.Screen name='Profile' component={MyAccount}
+        options={() => ({
+          headerShown: false,
+          drawerStyle: styles.tabs,
+          drawerIcon: () => (
+            <View style={styles.iconsContainer}>
+              <Image style={[styles.icons, { width: width * .055, height: height * .035 }]} source={icons.Profile} />
+            </View>
+          ),
+        })}
+      />  
+  <Drawer.Screen name='Product' component={SingleProduct}
+        options={() => ({
+          headerShown: false,
+          drawerStyle: styles.tabs,
+          drawerIcon: () => (
+            <View style={styles.iconsContainer}>
+              <Image  style={styles.icons} source={icons.Category} />
+            </View>
+          ),
+        })}
+      />  
+        <Drawer.Screen name='Services' component={TabNavigator}
+        options={() => ({
+          headerShown: false,
+          drawerStyle: styles.tabs,
+          drawerIcon: () => (
+            <View style={styles.iconsContainer}>
+              <Image  style={styles.icons} source={icons.Category} />
+            </View>
+          ),
+        })}
+      />  
+        <Drawer.Screen name='About Us' component={AboutUs}
+        options={() => ({
+          headerShown: false,
+          drawerStyle: styles.tabs,
+          drawerIcon: () => (
+            <View style={styles.iconsContainer}>
+              <Image  style={styles.icons} source={icons.Info} />
+            </View>
+          ),
+        })}
+      />  
+        <Drawer.Screen name='Help FAQ' component={Help}
+        options={() => ({
+          headerShown: false,
+          drawerStyle: styles.tabs,
+          drawerIcon: () => (
+            <View style={styles.iconsContainer}>
+              <Image  style={styles.icons} source={icons.Info} />
+            </View>
+          ),
+        })}
+      />  
+        <Drawer.Screen name='Contact Us' component={ContactUs}
+        options={() => ({
+          headerShown: false,
+          drawerStyle: styles.tabs,
+          drawerIcon: () => (
+            <View style={styles.iconsContainer}>
+              <Image style={styles.icons} source={icons.Info} />
+            </View>
+          ),
+        })}
+      />  
     </Drawer.Navigator>
   );
 }

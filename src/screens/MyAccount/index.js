@@ -13,26 +13,7 @@ const MyAccount = ({ navigation }) => {
         });
         setSingleFile(res);
     };
-
-    const checkScreen = (title) => {
-
-        switch (title) {
-            case 'Edit Profile':
-                return 'SetAccount';
-            case 'My Coupons':
-                return 'CouponScreen';
-           
-            case 'Help & FAQ':
-                return 'Help FAQ';
-            case 'About Us':
-                return 'About Us';
-            // case 'Logout':
-            //     return 'ContactScreen';
-            default:
-                return 'AccountDetails';
-        }
-
-    }
+ 
 
     return (
         <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
@@ -58,17 +39,41 @@ const MyAccount = ({ navigation }) => {
                 </View>
 
                 <View style={styles.btnContainer}>
-                    {dummyData.AccountData.map((item) =>
-                        <TouchableOpacity style={[styles.BtnRow, item.title == 'Logout' && { justifyContent: 'center' }]} onPress={() => navigation.navigate(checkScreen(item.title))} >
-                            <View style={styles.row}>
-                                <Image source={item.icon} style={[styles.profileIcon,{tintColor: COLORS.blue}]} resizeMode="contain" />
-                                <Text style={[styles.text, item.title == 'Logout' && { color: COLORS.blue }]}>{item.title}</Text>
-                            </View>
-                            {item.title != 'Logout' && (
-                                <Text style={styles.arrow}>&#62;</Text>
-                            )}
-                        </TouchableOpacity>
-                    )}
+                    <TouchableOpacity style={styles.BtnRow} onPress={() => navigation.navigate('SetAccount')} >
+                        <View style={styles.row}>
+                            <Image source={icons.Profile} style={styles.profileIcon} resizeMode="contain" />
+                            <Text style={styles.text}>Edit Profile</Text>
+                        </View>
+                        <Text style={styles.arrow}>&#62;</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.BtnRow} onPress={() => navigation.navigate('CouponScreen')} >
+                        <View style={styles.row}>
+                            <Image source={icons.Chart}  style={styles.profileIcon} resizeMode="contain" />
+                            <Text style={styles.text}>My Coupons</Text>
+                        </View>
+                        <Text style={styles.arrow}>&#62;</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.BtnRow} onPress={() => navigation.navigate('Help FAQ')} >
+                        <View style={styles.row}>
+                            <Image source={icons.Info} style={styles.profileIcon} resizeMode="contain" />
+                            <Text style={styles.text}>Help & FAQ</Text>
+                        </View>
+                        <Text style={styles.arrow}>&#62;</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.BtnRow} onPress={() => navigation.navigate('About Us')} >
+                        <View style={styles.row}>
+                            <Image source={icons.Lock}  style={styles.profileIcon} resizeMode="contain" />
+                            <Text style={styles.text}>About Us</Text>
+                        </View>
+                        <Text style={styles.arrow}>&#62;</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[styles.BtnRow, {justifyContent:'center'}]} >
+                        <View style={styles.row}>
+                            <Image source={icons.Logout} style={styles.profileIcon} resizeMode="contain" />
+                            <Text style={[styles.text, { color: COLORS.blue }]}>Logout</Text>
+                        </View>
+                    </TouchableOpacity>
+                  
                 </View>
 
             </View>

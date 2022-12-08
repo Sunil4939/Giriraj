@@ -361,35 +361,6 @@ const CouponData = [
     },
 ];
 
-const AccountData = [
-    {
-        id:1,
-        title: 'Edit Profile',
-        icon: icons.Profile,
-    },
-    {
-        id:2,
-        title: 'My Coupons',
-        icon: icons.Chart,
-    },
-   
-    {
-        id:3,
-        title: 'Help & FAQ',
-        icon: icons.Info,
-    },
-    {
-        id:4,
-        title: 'About Us',
-        icon: icons.Lock,
-    },
-    {
-        id:5,
-        title: 'Logout',
-        icon: icons.Logout,
-    },
-];
-
 const ProductDetails = [
     {
         id:1,
@@ -423,7 +394,6 @@ export default {
     PaymentMethod,
     NotificationData,
     CouponData,
-    AccountData,
     ProductColor,
     ProductDetails,
 }

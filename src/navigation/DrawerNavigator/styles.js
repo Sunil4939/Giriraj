@@ -41,6 +41,9 @@ export default StyleSheet.create({
     },
     drawerContainer:{
         borderTopRightRadius: 30,
-    }
+    },
+    iconsContainer:{
+        width: width * .06,
+    },
   
 })

@@ -20,131 +20,47 @@ import Coupons from '../../screens/Coupon';
 import MyAccount from '../../screens/MyAccount';
 
 
-const HomeStackData = [
-    {
-        id: 1,
-        name: 'HomeScreen',
-        component: HomeScreen,
-    },
-
-    {
-        id: 2,
-        name: 'SingleProductScreen',
-        component: SingleProduct,
-    },
-    {
-        id: 3,
-        name: 'SearchScreen',
-        component: SearchPage,
-    },
-    {
-        id: 4,
-        name: 'OrderPlaced',
-        component: OrderPlaced,
-    },
-    {
-        id: 5,
-        name: 'PaymentScreen',
-        component: PaymentGateway,
-    },
-    {
-        id: 6,
-        name: 'SetAccount',
-        component: SetAccountDetails,
-    },
-]
-
-const HistoryStackData = [
-    {
-        id: 1,
-        name: 'HistoryScreen',
-        component: OrderHistory,
-    },
-    {
-        id: 2,
-        name: 'ProductReturn',
-        component: ProductReturn,
-    },
-    {
-        id: 3,
-        name: 'ReasonReturnProduct',
-        component: ReasonOfReturn,
-    },
-
-]
-
-const NotificationStackData = [
-    {
-        id: 1,
-        name: 'NotificationScreen',
-        component: Notification,
-    },
-    {
-        id: 2,
-        name: 'CouponScreen',
-        component: Coupons,
-    },
-    {
-        id: 3,
-        name: 'AccountDetails',
-        component: MyAccount,
-    },
-   
-    // {
-    //     id: 6,
-    //     name: 'SetAccount',
-    //     component: SetAccountDetails,
-    // },
-]
-
-const AddedCartStackData = [
-    {
-        id: 1,
-        name: 'CartScreen',
-        component: AddedCarts,
-    },
-    {
-        id: 2,
-        name: 'AddressScreen',
-        component: AddAddress,
-    },
-    {
-        id: 3,
-        name: 'CategoryScreen',
-        component: CategoryPage,
-    },
-    {
-        id: 4,
-        name: 'FilterScreen',
-        component: FilterPage,
-    },
-    {
-        id: 5,
-        name: 'PlaceOrderScreen',
-        component: PlaceOrder,
-    },
-    {
-        id: 6,
-        name: 'NewAddressScreen',
-        component: NewAddress,
-    },
- 
-]
-
 const Stack = createStackNavigator();
 
 const HomeStack = () => {
 
     return (
         <Stack.Navigator initialRouteName='HomeScreen'>
-            {HomeStackData.map((item) =>
-                <Stack.Screen name={item.name} component={item.component}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-            )}
-
+            <Stack.Screen name="HomeScreen" component={HomeScreen}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="SingleProductScreen" component={SingleProduct}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="SearchScreen" component={SearchPage}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="OrderPlaced" component={OrderPlaced}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="PaymentScreen" component={PaymentGateway}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="SetAccount" component={SetAccountDetails}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="CouponScreen" component={Coupons}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
         </Stack.Navigator>
     );
 }
@@ -153,14 +69,21 @@ const HomeStack = () => {
 const HistoryStack = () => {
     return (
         <Stack.Navigator initialRouteName='HistoryScreen'>
-            {HistoryStackData.map((item) =>
-                <Stack.Screen name={item.name} component={item.component}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-            )}
-
+            <Stack.Screen name="HistoryScreen" component={OrderHistory}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="ProductReturn" component={ProductReturn}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="ReasonReturnProduct" component={ReasonOfReturn}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
         </Stack.Navigator>
     );
 }
@@ -168,13 +91,11 @@ const HistoryStack = () => {
 const NotificationStack = () => {
     return (
         <Stack.Navigator initialRouteName='NotificationScreen'>
-            {NotificationStackData.map((item) =>
-                <Stack.Screen name={item.name} component={item.component}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-            )}
+            <Stack.Screen name="NotificationScreen" component={Notification}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
 
         </Stack.Navigator>
     );
@@ -183,14 +104,36 @@ const NotificationStack = () => {
 const AddedCartStack = () => {
     return (
         <Stack.Navigator initialRouteName='CartScreen'>
-            {AddedCartStackData.map((item) =>
-                <Stack.Screen name={item.name} component={item.component}
-                    options={() => ({
-                        headerShown: false,
-                    })}
-                />
-            )}
-         
+            <Stack.Screen name="CartScreen" component={AddedCarts}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="AddressScreen" component={AddAddress}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="CategoryScreen" component={CategoryPage}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="FilterScreen" component={FilterPage}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="PlaceOrderScreen" component={PlaceOrder}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
+            <Stack.Screen name="NewAddressScreen" component={NewAddress}
+                options={() => ({
+                    headerShown: false,
+                })}
+            />
         </Stack.Navigator>
     );
 }

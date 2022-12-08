@@ -67,6 +67,7 @@ export default StyleSheet.create({
         width: width * .08,
         height: height * .04,
         marginRight: width * .03,
+        tintColor:COLORS.blue,
     },
    btnContainer:{
     marginTop: height * .02,

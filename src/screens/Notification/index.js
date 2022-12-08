@@ -20,19 +20,19 @@ const Notification = ({ navigation }) => {
             <View style={styles.notioficationBox}>
                 <Text style={styles.heading}>Today</Text>
                 {dummyData.NotificationData.map((item)=>
-                <Alert title={item.title} content={item.content}  onPress={()=> navigation.navigate('AccountDetails')} />
+                <Alert title={item.title} content={item.content} />
                 )}
             </View>
             <View style={styles.notioficationBox}>
                 <Text style={styles.heading}>Yesterday</Text>
                 {dummyData.NotificationData.map((item)=>
-                <Alert title={item.title} content={item.content} onPress={()=> navigation.navigate('AccountDetails')}  navigation={navigation} />
+                <Alert title={item.title} content={item.content}/>
                 )}
             </View>
             <View style={styles.notioficationBox}>
                 <Text style={styles.heading}>22 Jan, 2022</Text>
                 {dummyData.NotificationData.map((item)=>
-                <Alert title={item.title} content={item.content}  onPress={()=> navigation.navigate('AccountDetails')} />
+                <Alert title={item.title} content={item.content}  />
                 )}
             </View>
         </ScrollView>
